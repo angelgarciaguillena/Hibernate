@@ -1,0 +1,41 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de conexión a MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://dns11036.phdns11.es:3306/TU_USUARIO_AQUI</property>
+        <property name="hibernate.connection.username">TU_USUARIO_AQUI</property>
+        <property name="hibernate.connection.password">12345</property>
+        
+        <!-- Configuración del dialecto de MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        
+        <!-- Configuración de creación automática de tablas -->
+        <!-- update: actualiza el esquema si es necesario -->
+        <!-- create: crea el esquema, destruyendo datos previos -->
+        <!-- create-drop: crea el esquema y lo elimina al cerrar -->
+        <!-- validate: valida el esquema, no hace cambios -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- Mostrar SQL en consola -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        
+        <!-- Usar comentarios SQL -->
+        <property name="hibernate.use_sql_comments">true</property>
+        
+        <!-- Configuración del pool de conexiones C3P0 (opcional) -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        
+        <!-- Mapeo de entidades -->
+        <mapping class="entidades.Usuario"/>
+        <mapping class="entidades.Post"/>
+        <mapping class="entidades.Like"/>
+    </session-factory>
+</hibernate-configuration>
