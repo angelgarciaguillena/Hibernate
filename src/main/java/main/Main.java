@@ -88,7 +88,7 @@ public class Main {
     }
     
     private static void crearTablas() {
-        System.out.println("\n=== CREAR TABLAS ===");
+        System.out.println("\nCREAR TABLAS");
         System.out.println("1. Crear todas las tablas");
         System.out.println("2. Crear tabla especifica");
         System.out.print("Selecciona opcion: ");
@@ -97,8 +97,8 @@ public class Main {
         sc.nextLine();
         
         if (opcion == 1) {
-            System.out.println("Las tablas se crean automaticamente con Hibernate (hbm2ddl.auto=update)");
-            System.out.println("Tablas: Usuarios, Posts, Likes creadas/verificadas");
+            System.out.println("Las tablas se han creado");
+            System.out.println("Tablas: Usuarios, Posts, Likes creadas");
         } else if (opcion == 2) {
             System.out.println("Que tabla quieres crear?");
             System.out.println("1. Usuarios");
@@ -110,13 +110,13 @@ public class Main {
             if (tabla == 2 || tabla == 3) {
                 System.out.println("Esta tabla tiene dependencias. Asegurate de crear primero:");
                 if (tabla == 2) {
-                    System.out.println("  - Usuarios (tabla maestra)");
+                    System.out.println("Usuarios");
                 }
                 if (tabla == 3) {
-                    System.out.println("  - Usuarios y Posts (tablas maestras)");
+                    System.out.println("Usuarios y Posts");
                 }
             }
-            System.out.println("Tabla verificada/creada por Hibernate");
+            System.out.println("Tabla creada");
         }
     }
     

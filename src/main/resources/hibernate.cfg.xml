@@ -5,8 +5,8 @@
     <session-factory>
         <!-- Configuración de conexión a MySQL -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://dns11036.phdns11.es:3306/TU_USUARIO_AQUI</property>
-        <property name="hibernate.connection.username">TU_USUARIO_AQUI</property>
+        <property name="hibernate.connection.url">jdbc:mysql://dns11036.phdns11.es:3306/ad2526_angel_garcia</property>
+        <property name="hibernate.connection.username">ad2526_angel_garcia</property>
         <property name="hibernate.connection.password">12345</property>
         
         <!-- Configuración del dialecto de MySQL -->
@@ -34,8 +34,8 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
         
         <!-- Mapeo de entidades -->
-        <mapping class="entidades.Usuario"/>
-        <mapping class="entidades.Post"/>
-        <mapping class="entidades.Like"/>
+        <mapping class="entities.Usuario"/>
+        <mapping class="entities.Post"/>
+        <mapping class="entities.Like"/>
     </session-factory>
 </hibernate-configuration>

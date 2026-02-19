@@ -95,8 +95,8 @@ public class LikeCRUD {
         try {
             if (respuesta.equalsIgnoreCase("S")) {
                 System.out.println("Filtrar por:");
-                System.out.println("1. Usuario (username)");
-                System.out.println("2. Post (ID)");
+                System.out.println("1. Usuario");
+                System.out.println("2. Post");
                 System.out.println("3. ID del like");
                 System.out.print("Selecciona: ");
                 int filtro = sc.nextInt();
@@ -159,7 +159,7 @@ public class LikeCRUD {
         if (like == null) {
             System.out.println("No existe ningun like con ese ID");
         } else {
-            System.out.println("\n--- LIKE ENCONTRADO ---");
+            System.out.println("\nLIKE ENCONTRADO");
             System.out.println(like);
         }
     }
@@ -168,7 +168,7 @@ public class LikeCRUD {
         if (likes.isEmpty()) {
             System.out.println("No se encontraron likes");
         } else {
-            System.out.println("\n--- LIKES ENCONTRADOS (" + likes.size() + ") ---");
+            System.out.println("\nLIKES ENCONTRADOS (" + likes.size() + ")");
             for (Like l : likes) {
                 System.out.println(l);
             }
@@ -177,11 +177,7 @@ public class LikeCRUD {
     
     public void modificar() {
         System.out.println("\nMODIFICAR LIKE");
-        System.out.println("Los likes normalmente no se modifican");
         System.out.println("Los likes solo se crean (dar like) o se eliminan (quitar like)");
-        System.out.println();
-        System.out.println("Si deseas cambiar el like de un usuario a otro post,");
-        System.out.println("deberias borrar el like existente y crear uno nuevo.");
     }
     
     public void borrar() {

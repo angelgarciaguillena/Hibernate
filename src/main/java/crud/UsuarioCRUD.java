@@ -61,9 +61,9 @@ public class UsuarioCRUD {
         try {
             if (respuesta.equalsIgnoreCase("S")) {
                 System.out.println("Filtrar por:");
-                System.out.println("1. Nombre (=)");
-                System.out.println("2. Apellidos (LIKE)");
-                System.out.println("3. Username (=)");
+                System.out.println("1. Nombre");
+                System.out.println("2. Apellidos");
+                System.out.println("3. Username");
                 System.out.print("Selecciona: ");
                 int filtro = sc.nextInt();
                 sc.nextLine();

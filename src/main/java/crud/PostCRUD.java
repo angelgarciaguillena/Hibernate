@@ -68,7 +68,7 @@ public class PostCRUD {
         try {
             if (respuesta.equalsIgnoreCase("S")) {
                 System.out.println("Filtrar por:");
-                System.out.println("1. Usuario (username)");
+                System.out.println("1. Usuario");
                 System.out.println("2. Fecha de creacion");
                 System.out.println("3. ID del post");
                 System.out.print("Selecciona: ");
@@ -192,7 +192,7 @@ public class PostCRUD {
                     
                     session.update(post);
                     
-                    System.out.println("\n--- POST MODIFICADO ---");
+                    System.out.println("\nPOST MODIFICADO");
                     System.out.println(post);
                     
                     System.out.print("\nConfirmar cambios? (S/N): ");
@@ -221,7 +221,7 @@ public class PostCRUD {
                         
                         session.update(post);
                         
-                        System.out.println("\n--- POST MODIFICADO ---");
+                        System.out.println("\nPOST MODIFICADO");
                         System.out.println(post);
                         
                         System.out.print("\nConfirmar cambios? (S/N): ");
